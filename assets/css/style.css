@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: "organetto-variable", sans-serif;
+}
+
+header {
+    background-color: purple;
+    position: fixed;
+    z-index: -1;
+}
+
+main {
+    height: 100vh;
+    width: 98vw;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    list-style: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+header a {
+    font-weight: 800;
+    border: 1px solid white;
+    padding: 1em 3em;
+    border-radius: 30px;
+}
+
+header .container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 8vh;
+    min-height: 100px;
+    width: 100vw;
+    padding-right: 2em;
+}
+
+nav figure {
+    height: 8vh;
+    min-height: 100px;
+    width: 300px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+img.logo {
+    width: 80%;
+}
+
+aside {
+    height: 90%;
+    width: 300px;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 1em;
+}
+
+
+nav figure,
+nav ul,
+.playlist-container,
+.aside-bottom {
+    padding-inline: 20px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-bottom: 2em;
+}
+
+aside ul {
+    font-size: 1.3rem;
+    opacity: 0.6;
+}
+
+nav ul li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.3em;
+    padding-left: -0.5em;
+}
+
+aside .icon {
+    max-height: 40px;
+}
+
+.playlist-container {
+    margin-top: 1em;
+}
+
+.playlist-container h4 {
+    font-size: 1.4rem;
+}
+
+.playlist-container span {
+    font-size: 1.3rem;
+    opacity: 0.6;
+}
+
+.add-playlist {
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    margin-top: 1em;
+}
+
+.add-playlist div.plus-icon {
+    background-color: gray;
+    color: black;
+    font-size: 3rem;
+    font-weight: bold;
+    padding-inline: 15px;
+    aspect-ratio: 1;
+    width: fit-content;
+}
+
+.playlist-container ul {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    margin-top: 1em;
+}
+
+.app-install,
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.app-install {
+    margin-bottom: 1em;
+    border-bottom: 1px solid gray;
+    padding-bottom: 1em;
+}
+
+.app-install img {
+    height: 50px;
+}
+
+.profile img {
+    object-fit: cover;
+    clip-path: circle(50%);
+    background-color: gray;
+}
+
+#controls {
+    height: 10%;
+    background-color: darkgrey;
+    width: 100%;
+    border: 1px solid orange;
+    position: fixed;
+    bottom: 0;
+}
