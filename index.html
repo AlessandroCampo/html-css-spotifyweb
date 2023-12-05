@@ -20,106 +20,286 @@
         </div>
     </header>
     <main>
-        <aside>
-            <div class="aside-top">
+        <div class="container-center">
+            <aside>
+                <div class="aside-top">
+                    <nav>
+                        <figure>
+                            <img src="assets/img/logo.svg" alt="spotify-logo" class="logo">
+                        </figure>
+                        <ul>
+                            <li>
+                                <img src="assets/img/home.svg" alt="home" class="icon">
+                                <span>Home</span>
+                            </li>
+                            <li>
+                                <img src="assets/img/search.svg" alt="search" class="icon">Cerca
+                            </li>
+                            <li>
+                                <img src="assets/img/libreria.svg" alt="library" class="icon">
+                                <span>La tua libreria</span>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="playlist-container">
+                        <h4>
+                            PLAYLIST
+                        </h4>
+                        <div class="add-playlist">
+                            <div class="plus-icon">&plus;</div>
+                            <span>Crea Playlist</span>
+                        </div>
+
+                        <ul>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="aside-bottom">
+                    <div class="app-install">
+                        <div>
+                            <img src="assets/img/download.svg" alt="download" class="icon">
+                        </div>
+                        <span>
+                            Installa app
+                        </span>
+                    </div>
+                    <div class="profile">
+                        <img src="assets/img/profile.svg" alt="propic" class="icon">
+                        <span>Alessandro</span>
+                    </div>
+                </div>
+
+            </aside>
+
+            <div id="home">
                 <nav>
-                    <figure>
-                        <img src="assets/img/logo.svg" alt="spotify-logo" class="logo">
-                    </figure>
-                    <ul>
-                        <li>
-                            <img src="assets/img/home.svg" alt="home" class="icon">
-                            <span>Home</span>
-                        </li>
-                        <li>
-                            <img src="assets/img/search.svg" alt="search" class="icon">Cerca
-                        </li>
-                        <li>
-                            <img src="assets/img/libreria.svg" alt="library" class="icon">
-                            <span>La tua libreria</span>
-                        </li>
+                    <ul id="home-menu">
+                        <li>IN EVIDENZA</li>
+                        <li>PODCAST</li>
+                        <li>CLASSIFICHE</li>
+                        <li>GENERI E MOOD</li>
+                        <li>NUOVE USCITE</li>
+                        <li>SCOPRI</li>
                     </ul>
                 </nav>
-                <div class="playlist-container">
+
+                <section id="recently-played">
+                    <h2>
+                        Recently played
+                    </h2>
+
+                    <div class="card-container">
+                        <div class="song-card">
+                            <img src="assets/img/seafret_album.jpg" alt="">
+                            <div class="song-title">
+                                <h3>
+                                    Wildfire
+                                </h3>
+                            </div>
+
+                            <div class="song-author">
+                                <h4>
+                                    Seafret
+                                </h4>
+                            </div>
+                        </div>
+
+                        <div class="song-card">
+                            <img src="assets/img/bloody_valentine.jpg" alt="">
+                            <div class="song-title">
+                                <h3>
+                                    bloody valentine - Acoustic
+                                </h3>
+                            </div>
+
+                            <div class="song-author">
+                                <h4>
+                                    Machine Gun Kelly, Travis Barker
+                                </h4>
+                            </div>
+                        </div>
+
+                        <div class="song-card">
+                            <img src="assets/img/dont_look_back.jpg" alt="">
+                            <div class="song-title">
+                                <h3>
+                                    Don't Look Back In Anger
+                                </h3>
+                            </div>
+
+                            <div class="song-author">
+                                <h4>
+                                    Oasis
+                                </h4>
+                            </div>
+                        </div>
+
+                        <div class="song-card">
+                            <img src="assets/img/lucid_dreams.jpg" alt="">
+                            <div class="song-title">
+                                <h3>
+                                    Lucid Dreams
+                                </h3>
+                            </div>
+
+                            <div class="song-author">
+                                <h4>
+                                    Juice WRLD
+                                </h4>
+                            </div>
+                        </div>
+
+                        <div class="song-card">
+                            <img src="assets/img/somebody_else.jpg" alt="">
+                            <div class="song-title">
+                                <h3>
+                                    You're Somebody Else
+                                </h3>
+                            </div>
+
+                            <div class="song-author">
+                                <h4>
+                                    flora cash
+                                </h4>
+                            </div>
+                        </div>
+
+                        <div class="song-card">
+                            <img src="assets/img/bringr.jpg" alt="">
+                            <div class="song-title">
+                                <h3>
+                                    sTraNgeRs
+                                </h3>
+                            </div>
+
+                            <div class="song-author">
+                                <h4>
+                                    Bring Me The Horizon
+                                </h4>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+                </section>
+
+                <section id="for-you">
+                    <h2>
+                        Creato per Alessandro
+                    </h2>
                     <h4>
-                        PLAYLIST
+                        Piu' ascolti, piu' accurati saranno i suggerimenti
                     </h4>
-                    <div class="add-playlist">
-                        <div class="plus-icon">&plus;</div>
-                        <span>Crea Playlist</span>
+
+                    <div class="card-container">
+                        <div class="song-card">
+                            <img src="assets/img/radar.jpeg" alt="">
+                            <h3>
+                                Release Radar
+                            </h3>
+                        </div>
+
+                        <div class="song-card">
+                            <img src="assets/img/mixdaily.jpeg" alt="">
+                            <h3>
+                                Daily Mix 1
+                            </h3>
+                        </div>
+
                     </div>
+                </section>
 
-                    <ul>
-                        <li>Nome Playlist</li>
-                        <li>Nome Playlist</li>
-                        <li>Nome Playlist</li>
-                        <li>Nome Playlist</li>
-                        <li>Nome Playlist</li>
-                        <li>Nome Playlist</li>
-                        <li>Nome Playlist</li>
-                    </ul>
-                </div>
-            </div>
+                <section id="most-popular">
+                    <h2>
+                        Artisti piu' popolari
+                    </h2>
 
-
-            <div class="aside-bottom">
-                <div class="app-install">
-                    <div>
-                        <img src="assets/img/download.svg" alt="download" class="icon">
-                    </div>
-                    <span>
-                        Installa app
-                    </span>
-                </div>
-                <div class="profile">
-                    <img src="assets/img/profile.svg" alt="propic" class="icon">
-                    <span>Alessandro</span>
-                </div>
-            </div>
-
-        </aside>
-
-        <div id="controls">
-            <div class="song">
-                <figure>
-                    <img src="assets/img/chemical.jpg" alt="">
-                </figure>
-                <div class="song-info">
                     <h4>
-                        Chemical
+                        Piu' ascolti, piu' accurati saranno i suggerimenti
                     </h4>
-                    <div class="author">
-                        Post Malone
+                    <div class="card-container">
+                        <div class="song-card">
+                            <img src="assets/img/post_malone.jpg" alt="" class="rounded">
+                            <h3>
+                                Post Malone
+                            </h3>
+                        </div>
+
+                        <div class="song-card">
+                            <img src="assets/img/eminem.jpg" alt="" class="rounded">
+                            <h3>
+                                Eminem
+                            </h3>
+                        </div>
                     </div>
-                </div>
-                <i class="fa-regular fa-heart"></i>
-            </div>
-            <!-- <audio controls>
-                <source src="assets/songs/Post Malone - Chemical (Lyrics).mp3" type="audio/mpeg">
-            </audio> -->
+                </section>
 
-            <div class="song-inputs">
-                <div class="icons">
-                    <i class="fa-solid fa-shuffle"></i>
-                    <i class="fa-solid fa-backward-step"></i>
-                    <i class="fa-solid fa-circle-play"></i>
-                    <i class="fa-solid fa-forward-step"></i>
-                    <i class="fa-solid fa-arrow-rotate-right"></i>
-                </div>
-                <div class="slidecontainer">
-                    <span>0:00</span>
-                    <input type="range" min="1" max="100" value="0" class="slider" id="song-slider">
-                    <span>2:30</span>
-                </div>
-            </div>
 
-            <div class="volume-panel">
-                <i class="fa-solid fa-sliders"></i>
-                <i class="fa-solid fa-desktop"></i>
-                <i class="fa-solid fa-volume-high"></i>
-                <input type="range" min="1" max="100" value="30" class="slider" id="volume-slider">
+
             </div>
         </div>
+
+
+
+
+        <div id="controls">
+            <div class="controls-container">
+                <div class="song">
+                    <figure>
+                        <img src="assets/img/chemical.jpg" alt="">
+                    </figure>
+                    <div class="song-info">
+                        <h4>
+                            Chemical
+                        </h4>
+                        <div class="author">
+                            Post Malone
+                        </div>
+                    </div>
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+                <!-- <audio controls>
+                    <source src="assets/songs/Post Malone - Chemical (Lyrics).mp3" type="audio/mpeg">
+                </audio> -->
+
+                <div class="song-inputs">
+                    <div class="icons">
+                        <i class="fa-solid fa-shuffle"></i>
+                        <i class="fa-solid fa-backward-step"></i>
+                        <i class="fa-solid fa-circle-play"></i>
+                        <i class="fa-solid fa-forward-step"></i>
+                        <i class="fa-solid fa-arrow-rotate-right"></i>
+                    </div>
+                    <div class="slidecontainer">
+                        <span>0:00</span>
+                        <input type="range" min="1" max="100" value="0" class="slider" id="song-slider">
+                        <span>2:30</span>
+                    </div>
+                </div>
+
+                <div id="volume-panel">
+                    <i class="fa-solid fa-sliders"></i>
+                    <i class="fa-solid fa-desktop"></i>
+                    <i class="fa-solid fa-volume-high"></i>
+                    <input type="range" min="1" max="100" value="30" class="slider" id="volume-slider">
+                </div>
+            </div>
+        </div>
+
     </main>
 
 </body>
