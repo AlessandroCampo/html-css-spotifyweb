@@ -9,7 +9,7 @@ html {
 }
 
 header {
-    background-color: purple;
+    background-color: rgba(128, 0, 128, 0.8);
     position: fixed;
     z-index: 0;
 }
@@ -39,6 +39,8 @@ header a {
     border: 1px solid white;
     padding: 1em 3em;
     border-radius: 30px;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    max-width: 90%;
 }
 
 header .container {
@@ -58,11 +60,17 @@ nav figure {
     background-color: black;
     display: flex;
     align-items: center;
-    margin-bottom: 2em;
+    margin-bottom: 0.5em;
 }
 
-img.logo {
-    width: 80%;
+.logo,
+.logo-small {
+    width: 60%;
+    margin-left: -0.2em;
+}
+
+.logo-small {
+    display: none;
 }
 
 .container-center {
@@ -74,17 +82,19 @@ img.logo {
 
 aside {
     height: 100%;
-    width: 300px;
+    width: 250px;
     background-color: black;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-start;
     padding-bottom: 8em;
     overflow-y: auto;
     overflow-x: hidden;
     position: absolute;
     top: 0;
+    padding-inline: 1em;
 }
 
 
@@ -92,7 +102,7 @@ nav figure,
 nav ul,
 .playlist-container,
 .aside-bottom {
-    padding-inline: 20px;
+    /* padding-inline: 20px; */
 }
 
 nav ul {
@@ -103,7 +113,7 @@ nav ul {
 }
 
 aside ul {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     opacity: 0.6;
 }
 
@@ -194,7 +204,6 @@ aside .icon {
     justify-content: space-between;
     align-items: center;
     padding: 1em;
-
 }
 
 .controls-container>div {
@@ -206,7 +215,10 @@ aside .icon {
     display: flex;
     align-items: center;
     color: white;
-    gap: 1em;
+    gap: 5%;
+    width: 15%;
+    min-width: 100px;
+    font-size: clamp(0.8rem, 1vw, 1rem);
 }
 
 .song-info .author {
@@ -223,6 +235,8 @@ aside .icon {
 
 .song img {
     max-height: 80px;
+    max-width: 100%;
+    min-width: 50px;
 }
 
 .song-inputs {
@@ -232,17 +246,20 @@ aside .icon {
     align-items: center;
     opacity: 0.85;
     margin-block: 1em;
+    width: 60%;
 }
 
 .icons {
     color: white;
     display: flex;
-    gap: 1.5em;
-    font-size: 2rem;
+    gap: clamp(0.8em, 2vw, 1.5em);
+    justify-content: center;
+    font-size: clamp(1.2rem, 2vw, 2rem)
 }
 
 .slidecontainer {
     color: white;
+    font-size: clamp(0.8rem, 1vw, 1rem);
 }
 
 .slidecontainer span {
@@ -250,8 +267,8 @@ aside .icon {
 }
 
 #song-slider {
-    width: 30vw;
-    margin-inline: 1.5em;
+    width: 25vw;
+    margin-inline: 1vw;
     color: white;
     vertical-align: middle;
     background-color: gray;
@@ -264,8 +281,11 @@ aside .icon {
 #volume-panel {
     color: white;
     display: flex;
-    gap: 1.5em;
+    gap: clamp(0.5em, 1vw, 1.5em);
     opacity: 0.85;
+    width: 15%;
+    min-width: 55px;
+    justify-content: center;
 
 }
 
@@ -275,7 +295,7 @@ aside .icon {
 
 #home {
     width: 100%;
-    margin-left: 300px;
+    margin-left: 250px;
     height: 100%;
     margin-top: max(8vh, 90px);
     padding: 2em;
@@ -300,6 +320,7 @@ section {
     font-size: 1.2rem;
     color: white;
     gap: 1em;
+    flex-wrap: wrap;
 }
 
 .card-container {
@@ -323,13 +344,15 @@ section {
 }
 
 #home h3 {
-    font-size: clamp(0.2rem, 2vw, 1.3rem);
+    font-size: clamp(0.8rem, 2.5vw, 1.3rem);
+    text-align: center;
     margin-top: 0.5em;
 }
 
 #home h4 {
     opacity: 0.5;
-    font-size: 1.1rem;
+    font-size: clamp(0.5rem, 1.5vw, 1.1rem);
+    text-align: center;
 }
 
 section>h4 {
@@ -342,4 +365,66 @@ section>h4 {
 
 .rounded {
     clip-path: circle(50%);
+}
+
+@media screen and (max-width: 992px) {
+    .song-card {
+        width: calc((100% / 4) - (1.5em * 3 / 4))
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .song-card {
+        width: calc((100% / 2) - (1.5em * 1 / 2))
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    aside {
+        width: 70px;
+
+    }
+
+    #home {
+        margin-left: 70px;
+    }
+
+    .playlist-container,
+    aside span {
+        display: none;
+    }
+
+    .aside-top figure {
+        margin-bottom: 0;
+    }
+
+    img.logo {
+        display: none;
+    }
+
+    .logo-small {
+        display: block;
+        width: 15.5%;
+    }
+
+    #volume-panel {
+        width: 10%;
+    }
+
+    .song {
+        width: 10%;
+    }
+
+    #volume-panel .fa-sliders,
+    #volume-panel .fa-desktop,
+    .song .fa-heart {
+        display: none;
+    }
+
+    .controls-container {
+        padding-inline: 0.4em;
+    }
+
 }
