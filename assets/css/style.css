@@ -9,7 +9,7 @@ html {
 }
 
 header {
-    background-color: rgba(128, 0, 128, 0.8);
+    background-color: rgba(6, 106, 223, 1);
     position: fixed;
     z-index: 0;
 }
@@ -94,8 +94,9 @@ aside {
     overflow-x: hidden;
     position: absolute;
     top: 0;
-    padding-inline: 1em;
+    /* padding-inline: 1em; */
 }
+
 
 
 nav figure,
@@ -114,6 +115,9 @@ nav ul {
 
 aside ul {
     font-size: 1.2rem;
+}
+
+.aside-top li {
     opacity: 0.6;
 }
 
@@ -129,12 +133,52 @@ aside .icon {
     max-height: 40px;
 }
 
+.aside-top nav li {
+    border-left: 5px solid black;
+}
+
+.aside-top nav li:first-child {
+    border-left: 5px solid skyblue;
+}
+
+.aside-top nav li {
+    padding-left: 0.8em;
+}
+
+.aside-top nav figure {
+    padding-left: 1.1em;
+}
+
+.playlist-container {
+    margin-left: calc(0.8em + 5px);
+}
+
+.aside-bottom {
+    padding-inline: calc(0.8em + 5px);
+}
+
+.aside-top,
+.aside-bottom {
+    width: 100%;
+}
+
+
+.aside-top li:first-child hr {
+    position: absolute;
+    border-left: 2px solid skyblue;
+    /* left: -2em;
+    bottom: 0;
+    top: 0;
+    border: 2px solid skyblue; */
+}
+
 .playlist-container {
     margin-top: 1em;
 }
 
 .playlist-container h4 {
     font-size: 1.4rem;
+    margin-bottom: 3vh;
 }
 
 .playlist-container span {
@@ -150,18 +194,19 @@ aside .icon {
 }
 
 .add-playlist div.plus-icon {
-    background-color: gray;
+    background-color: white;
+    opacity: 0.5;
     color: black;
     font-size: 3rem;
     font-weight: bold;
-    padding-inline: 15px;
+    padding-inline: 12px;
     aspect-ratio: 1;
     width: fit-content;
 }
 
 .playlist-container ul {
     display: flex;
-    gap: 1em;
+    gap: 1.5em;
     flex-direction: column;
     margin-top: 1em;
 }
@@ -174,23 +219,31 @@ aside .icon {
 }
 
 .app-install {
-    margin-bottom: 1em;
-    border-bottom: 1px solid gray;
-    padding-bottom: 1em;
+
+    opacity: 0.5;
 }
 
 .app-install img {
     height: 50px;
 }
 
+.profile {
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: 1px solid gray;
+}
+
 .profile img {
     object-fit: cover;
     clip-path: circle(50%);
     background-color: gray;
+
 }
 
 .aside-bottom {
     margin-bottom: 1em;
+    width: 100%;
+    overflow-y: hidden;
 }
 
 
@@ -226,7 +279,7 @@ aside .icon {
 }
 
 .song-info {
-    margin-right: 1em;
+    margin-right: 0.6em;
 }
 
 .song figure {
@@ -312,7 +365,6 @@ section {
 
 #home-menu {
     display: flex;
-    opacity: 0.5;
     flex-direction: row;
     justify-content: center;
     margin: 0 auto 4em;
@@ -321,6 +373,10 @@ section {
     color: white;
     gap: 1em;
     flex-wrap: wrap;
+}
+
+#home-menu li {
+    opacity: 0.5;
 }
 
 .card-container {
@@ -359,13 +415,100 @@ section>h4 {
     margin-block: 1em;
 }
 
-.song-card>img {
+.song-card img {
     max-width: 100%;
+}
+
+.song-card figure {
+    position: relative;
+}
+
+.song-card i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10vh;
+    z-index: -1;
 }
 
 .rounded {
     clip-path: circle(50%);
 }
+
+#most-popular h4,
+#for-you h4 {
+    text-align: left;
+}
+
+.aside-bottom {
+    overflow-y: hidden;
+}
+
+.playlist-container li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+}
+
+#home-menu li:first-child {
+    position: relative;
+}
+
+#home-menu li:first-child hr {
+    position: absolute;
+    border: 2px solid skyblue;
+    bottom: -0.5em;
+    left: 30%;
+    right: 30%;
+    margin: 0 auto;
+
+}
+
+.fa-heart {
+    font-size: 1.3rem;
+    opacity: 0.5;
+}
+
+/* .aside-top {
+    overflow-y: scroll;
+} */
+
+/******** MEDIA QUERY  *********/
+
+#home-menu li:hover,
+.playlist-container span:hover,
+.aside-top li:hover,
+.fa-heart:hover,
+.app-install:hover {
+    color: white;
+    opacity: 1;
+    cursor: pointer;
+}
+
+header a:hover {
+    scale: 1.1;
+}
+
+.song-card:hover img {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.song-card:hover i {
+    z-index: 1;
+    cursor: pointer;
+}
+
+.controls-container i:hover,
+input[type="range"] {
+    cursor: pointer;
+}
+
+
+
+/******** MEDIA QUERY  *********/
 
 @media screen and (max-width: 992px) {
     .song-card {
