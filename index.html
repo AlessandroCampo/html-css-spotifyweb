@@ -16,7 +16,9 @@
     <div class="web-app">
         <header>
             <div class="container">
-
+                <audio id="song-player">
+                    <source src="assets/songs/Post Malone - Chemical (Lyrics).mp3" type="audio/mpeg">
+                </audio>
                 <a href=""> EFFETTUA L'UPGRADE </a>
             </div>
         </header>
@@ -124,7 +126,8 @@
                     <div class="song-card">
                         <figure>
                             <i class="fa-regular fa-circle-play"></i>
-                            <img src="assets/img/seafret_album.jpg" alt="">
+                            <img src="assets/img/seafret_album.jpg" alt="" data-song-name="Wildfire"
+                                data-song-author="Seafret">
                         </figure>
                         <div class="song-title">
                             <h3>
@@ -141,8 +144,11 @@
 
                     <div class="song-card">
                         <figure>
+                            <img src="assets/img/bloody_valentine.jpg" alt=""
+                                data-song-name="bloody valentine - Acoustic"
+                                data-song-author="Machine Gun Kelly, Travis Barker">
+
                             <i class="fa-regular fa-circle-play"></i>
-                            <img src="assets/img/bloody_valentine.jpg" alt="">
                         </figure>
 
                         <div class="song-title">
@@ -161,25 +167,26 @@
                     <div class="song-card">
                         <figure>
                             <i class="fa-regular fa-circle-play"></i>
-                            <img src="assets/img/dont_look_back.jpg" alt="">
-                        </figure>
-                        <div class="song-title">
-                            <h3>
-                                Don't Look Back In Anger
-                            </h3>
-                        </div>
+                            <img src="assets/img/dont_look_back.jpg" alt="" data-song-name="Don't Look Back In Anger"
+                                data-song-author="Oasis" </figure>
+                            <div class="song-title">
+                                <h3>
+                                    Don't Look Back In Anger
+                                </h3>
+                            </div>
 
-                        <div class="song-author">
-                            <h4>
-                                Oasis
-                            </h4>
-                        </div>
+                            <div class="song-author">
+                                <h4>
+                                    Oasis
+                                </h4>
+                            </div>
                     </div>
 
                     <div class="song-card">
                         <figure>
                             <i class="fa-regular fa-circle-play"></i>
-                            <img src="assets/img/lucid_dreams.jpg" alt="">
+                            <img src="assets/img/lucid_dreams.jpg" alt="" data-song-name="Lucid Dreams"
+                                data-song-author="Juice WRLD">
                         </figure>
                         <div class="song-title">
                             <h3>
@@ -197,7 +204,8 @@
                     <div class="song-card">
                         <figure>
                             <i class="fa-regular fa-circle-play"></i>
-                            <img src="assets/img/somebody_else.jpg" alt="">
+                            <img src="assets/img/somebody_else.jpg" alt="" data-song-name="You're Somebody Else"
+                                data-song-author="flora cash">
                         </figure>
                         <div class="song-title">
                             <h3>
@@ -215,7 +223,8 @@
                     <div class="song-card">
                         <figure>
                             <i class="fa-regular fa-circle-play"></i>
-                            <img src="assets/img/bringr.jpg" alt="">
+                            <img src="assets/img/bringr.jpg" alt="" data-song-name="sTraNgeRs"
+                                data-song-author="Bring Me The Horizon">
                         </figure>
                         <div class="song-title">
                             <h3>
@@ -314,13 +323,13 @@
             <div class="controls-container">
                 <div class="song">
                     <figure>
-                        <img src="assets/img/chemical.jpg" alt="">
+                        <img src="assets/img/chemical.jpg" alt="" id="song-thumbnail">
                     </figure>
                     <div class="song-info">
-                        <h4>
+                        <h4 id="song-title">
                             Chemical
                         </h4>
-                        <div class="author">
+                        <div id="song-author">
                             Post Malone
                         </div>
                     </div>
@@ -334,14 +343,14 @@
                     <div class="icons">
                         <i class="fa-solid fa-shuffle"></i>
                         <i class="fa-solid fa-backward-step"></i>
-                        <i class="fa-solid fa-circle-play"></i>
+                        <i class="fa-solid fa-circle-play" id="play-pause"></i>
                         <i class="fa-solid fa-forward-step"></i>
                         <i class="fa-solid fa-arrow-rotate-right"></i>
                     </div>
                     <div class="slidecontainer">
-                        <span>0:00</span>
+                        <span id="song-played">0:00</span>
                         <input type="range" min="1" max="100" value="0" class="slider" id="song-slider">
-                        <span>2:30</span>
+                        <span id="song-duration">2:30</span>
                     </div>
                 </div>
 
@@ -355,6 +364,8 @@
         </div>
     </div>
 
+
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -262,11 +262,16 @@ aside .icon {
     gap: 5%;
     width: 15%;
     min-width: 100px;
+}
+
+.song-info #song-title {
     font-size: clamp(0.8rem, 1vw, 1rem);
 }
 
-.song-info .author {
-    opacity: 0.7;
+.song-info #song-author {
+    opacity: 0.6;
+    font-size: clamp(0.5rem, 0.8vw, 0.85rem);
+    margin-top: 0.4em;
 }
 
 .song-info {
@@ -346,7 +351,6 @@ aside .icon {
 
 #home {
     width: calc(100% - 250px);
-    border: 1px solid red;
     margin-left: 250px;
     height: 100%;
     margin-top: max(8vh, 90px);
@@ -470,6 +474,7 @@ section>h4 {
 
 
 
+
 /******** HOVER EFFECTS  *********/
 
 #home-menu li:hover,
@@ -494,6 +499,7 @@ header a:hover {
 .song-card:hover i {
     z-index: 1;
     cursor: pointer;
+    pointer-events: none;
 }
 
 .controls-container i:hover,
