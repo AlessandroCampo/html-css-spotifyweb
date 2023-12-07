@@ -149,18 +149,17 @@ aside .icon {
 
 .playlist-container {
     margin-left: calc(0.8em + 5px);
-    margin-top: 1em;
-    overflow: auto;
-    height: 330px;
-    border: 1px solid white;
+    margin-top: 1vh;
+}
 
+#my-playlists {
+    height: 255px;
+    overflow: auto;
 }
 
 .aside-bottom {
     padding-inline: calc(0.8em + 5px);
     margin-bottom: 1em;
-    height: 120px;
-    border: 1px solid lime;
 }
 
 
@@ -528,6 +527,7 @@ input[type="range"] {
 
     #home {
         margin-left: 70px;
+        width: calc(100% - 70px);
     }
 
     .playlist-container,
@@ -567,4 +567,20 @@ input[type="range"] {
         padding-inline: 0.4em;
     }
 
+}
+
+@media screen and (max-height: 940px) {
+    #my-playlists {
+        height: 120px;
+    }
+}
+
+@media screen and (max-height: 790px) {
+    #my-playlists {
+        height: 52px;
+    }
+
+    .app-install {
+        display: none;
+    }
 }
