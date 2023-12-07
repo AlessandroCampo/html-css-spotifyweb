@@ -86,7 +86,7 @@ nav figure {
 
 
 aside {
-    height: 100%;
+    height: calc(100% - 130px);
     width: 250px;
     background-color: black;
     color: white;
@@ -94,7 +94,7 @@ aside {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    padding-bottom: 8em;
+    /* padding-bottom: 8em; */
     overflow-y: auto;
     overflow-x: hidden;
     position: fixed;
@@ -149,6 +149,9 @@ aside .icon {
 
 .playlist-container {
     margin-left: calc(0.8em + 5px);
+    margin-top: 1em;
+    overflow: auto;
+
 }
 
 .aside-bottom {
@@ -168,9 +171,7 @@ aside .icon {
     border-left: 2px solid skyblue;
 }
 
-.playlist-container {
-    margin-top: 1em;
-}
+
 
 .playlist-container h4 {
     font-size: 1.4rem;
