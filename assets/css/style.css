@@ -507,6 +507,13 @@ input[type="range"] {
     cursor: pointer;
 }
 
+/*** POINTER EVENT RESETS ****/
+
+#my-playlists li img,
+#my-playlists li span {
+    pointer-events: none;
+}
+
 
 
 /******** MEDIA QUERY  *********/

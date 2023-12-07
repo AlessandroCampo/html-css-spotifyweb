@@ -17,7 +17,7 @@
         <header>
             <div class="container">
                 <audio id="song-player">
-                    <source src="assets/songs/Post Malone - Chemical (Lyrics).mp3" type="audio/mpeg">
+                    <source src="assets/songs/Chemical.mp3" type="audio/mpeg">
                 </audio>
                 <a href=""> EFFETTUA L'UPGRADE </a>
             </div>
@@ -56,25 +56,25 @@
                     </div>
 
                     <ul id="my-playlists">
-                        <li>
+                        <li data-playlist-name="rap-playlist" class="playlist-card">
                             <img src="assets/img/rap-playlist.png" alt="">
                             <span>
                                 Italian Rap
                             </span>
                         </li>
-                        <li>
+                        <li data-playlist-name="metal-playlist" class="playlist-card">
                             <img src="assets/img/metal-playlist.png" alt="">
                             <span>
                                 Metal\Alternative
                             </span>
                         </li>
-                        <li>
+                        <li data-playlist-name="depressed-playlist" class="playlist-card">
                             <img src="assets/img/depressed-playlist.png" alt="">
                             <span>
                                 Depressed songs
                             </span>
                         </li>
-                        <li>
+                        <li data-playlist-name="indie-playlist" class="playlist-card">
                             <img src="assets/img/indie-playlist.png" alt="">
                             <span>
                                 Indie\Alternative
@@ -168,18 +168,19 @@
                         <figure>
                             <i class="fa-regular fa-circle-play"></i>
                             <img src="assets/img/dont_look_back.jpg" alt="" data-song-name="Don't Look Back In Anger"
-                                data-song-author="Oasis" </figure>
-                            <div class="song-title">
-                                <h3>
-                                    Don't Look Back In Anger
-                                </h3>
-                            </div>
+                                data-song-author="Oasis">
+                        </figure>
+                        <div class="song-title">
+                            <h3>
+                                Don't Look Back In Anger
+                            </h3>
+                        </div>
 
-                            <div class="song-author">
-                                <h4>
-                                    Oasis
-                                </h4>
-                            </div>
+                        <div class="song-author">
+                            <h4>
+                                Oasis
+                            </h4>
+                        </div>
                     </div>
 
                     <div class="song-card">
@@ -341,15 +342,15 @@
 
                 <div class="song-inputs">
                     <div class="icons">
-                        <i class="fa-solid fa-shuffle"></i>
-                        <i class="fa-solid fa-backward-step"></i>
+                        <i class="fa-solid fa-shuffle" id="shuffle-icon"></i>
+                        <i class="fa-solid fa-backward-step" id="back-icon"></i>
                         <i class="fa-solid fa-circle-play" id="play-pause"></i>
-                        <i class="fa-solid fa-forward-step"></i>
-                        <i class="fa-solid fa-arrow-rotate-right"></i>
+                        <i class="fa-solid fa-forward-step" id="forward-icon"></i>
+                        <i class="fa-solid fa-arrow-rotate-right" id="refresh-icon"></i>
                     </div>
                     <div class="slidecontainer">
                         <span id="song-played">0:00</span>
-                        <input type="range" min="1" max="100" value="0" class="slider" id="song-slider">
+                        <input type="range" min="1" max="500" value="0" class="slider" id="song-slider">
                         <span id="song-duration">2:30</span>
                     </div>
                 </div>
@@ -357,8 +358,8 @@
                 <div id="volume-panel">
                     <i class="fa-solid fa-sliders"></i>
                     <i class="fa-solid fa-desktop"></i>
-                    <i class="fa-solid fa-volume-high"></i>
-                    <input type="range" min="1" max="100" value="30" class="slider" id="volume-slider">
+                    <i class="fa-solid fa-volume-high" id="volume-icon"></i>
+                    <input type="range" min="0" max="10" value="5" class="slider" id="volume-slider">
                 </div>
             </div>
         </div>
