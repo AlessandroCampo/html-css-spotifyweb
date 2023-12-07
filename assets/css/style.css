@@ -8,13 +8,8 @@ html {
     font-family: "organetto-variable", sans-serif;
 }
 
-header {
-    background-color: rgba(6, 106, 223, 1);
-    position: fixed;
-    z-index: 0;
-}
 
-main {
+.web-app {
     height: 100vh;
     width: 100vw;
     overflow-y: hidden;
@@ -34,6 +29,17 @@ ul {
     list-style: none;
 }
 
+/* HEADER */
+
+header {
+    background-color: rgba(6, 106, 223, 1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+
 header a {
     font-weight: 800;
     border: 1px solid white;
@@ -52,6 +58,8 @@ header .container {
     width: 100vw;
     padding-right: 2em;
 }
+
+/* LOGO */
 
 nav figure {
     height: 8vh;
@@ -73,11 +81,8 @@ nav figure {
     display: none;
 }
 
-.container-center {
-    height: 100%;
-    display: flex;
-}
 
+/* SIDEBAR */
 
 
 aside {
@@ -92,19 +97,12 @@ aside {
     padding-bottom: 8em;
     overflow-y: auto;
     overflow-x: hidden;
-    position: absolute;
+    position: fixed;
     top: 0;
+    z-index: 3;
     /* padding-inline: 1em; */
 }
 
-
-
-nav figure,
-nav ul,
-.playlist-container,
-.aside-bottom {
-    /* padding-inline: 20px; */
-}
 
 nav ul {
     display: flex;
@@ -155,7 +153,9 @@ aside .icon {
 
 .aside-bottom {
     padding-inline: calc(0.8em + 5px);
+    margin-bottom: 1em;
 }
+
 
 .aside-top,
 .aside-bottom {
@@ -166,10 +166,6 @@ aside .icon {
 .aside-top li:first-child hr {
     position: absolute;
     border-left: 2px solid skyblue;
-    /* left: -2em;
-    bottom: 0;
-    top: 0;
-    border: 2px solid skyblue; */
 }
 
 .playlist-container {
@@ -213,7 +209,6 @@ aside .icon {
 }
 
 .app-install {
-
     opacity: 0.5;
 }
 
@@ -234,11 +229,8 @@ aside .icon {
 
 }
 
-.aside-bottom {
-    margin-bottom: 1em;
-    width: 100%;
-    overflow-y: hidden;
-}
+/* CONTROLS BAR BOTTOM */
+
 
 
 .controls-container {
@@ -251,6 +243,7 @@ aside .icon {
     justify-content: space-between;
     align-items: center;
     padding: 1em;
+    z-index: 3;
 }
 
 .controls-container>div {
@@ -340,15 +333,23 @@ aside .icon {
     display: flex;
 }
 
+.fa-heart {
+    font-size: 1.3rem;
+    opacity: 0.5;
+}
+
+/* MAIN PART WEB-APP */
+
 #home {
-    width: 100%;
+    width: calc(100% - 250px);
+    border: 1px solid red;
     margin-left: 250px;
     height: 100%;
     margin-top: max(8vh, 90px);
     padding: 2em;
     padding-bottom: 250px;
     background-color: #141922;
-    overflow-y: scroll;
+    overflow-y: auto;
     z-index: 0;
     color: white;
 }
@@ -435,9 +436,6 @@ section>h4 {
     text-align: left;
 }
 
-.aside-bottom {
-    overflow-y: hidden;
-}
 
 .playlist-container li {
     display: flex;
@@ -466,16 +464,9 @@ section>h4 {
 
 }
 
-.fa-heart {
-    font-size: 1.3rem;
-    opacity: 0.5;
-}
 
-/* .aside-top {
-    overflow-y: scroll;
-} */
 
-/******** MEDIA QUERY  *********/
+/******** HOVER EFFECTS  *********/
 
 #home-menu li:hover,
 .playlist-container span:hover,
